@@ -20,7 +20,7 @@ The Note Panel project is basically a panel of post-its for notes and tasks. I u
 
 > ## Online Project
 
-To see the project online just click on [HERE](https://notepanel.github.io/) or enter the link [notepanel.github.io](https://notepanel.github.io).
+To see the project online just click on [HERE](https://notepanel.netlify.app/) or enter the link [notepanel.netlify.app](https://notepanel.netlify.app/).
 
 ---
 
@@ -30,4 +30,3 @@ To see the project online just click on [HERE](https://notepanel.github.io/) or 
 
 ## License
  * [MIT](LICENSE)
- 

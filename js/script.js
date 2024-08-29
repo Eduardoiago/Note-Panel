@@ -18,5 +18,26 @@ function loadNotes() { // Carregando notas do LocalStorage
     });
 }
 
+// Criando um novo post-it
+function createNote(text = '', top = '10px', left = '10px') {
+    const board = document.getElementById('board');
+    const note = document.createElement('div');
+    note.className = 'note';
+    note.style.top = top;
+    note.style.left = left;
+    // Input de texto
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    note.appendChild(textArea);
+    // Botão para excluir post-it
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'X';
+    deleteBtn.addEventListener('click', function() {
+        board.removeChild(note);
+        saveNotes(); // Atualizando LocalStorage após exclusão
+    });
+    note.appendChild(deleteBtn);
+}    
+
 // Carregar as notas quando a página é carregada
 window.onload = loadNotes;

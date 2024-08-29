@@ -64,3 +64,8 @@ function createNote(text = '', top = '10px', left = '10px') {
 
 // Carregar as notas quando a página é carregada
 window.onload = loadNotes;
+
+// Adicionar evento ao botão para criar uma nova nota
+document.getElementById('addNote').addEventListener('click', function() {
+    createNote();
+});

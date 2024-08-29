@@ -37,6 +37,29 @@ function createNote(text = '', top = '10px', left = '10px') {
         saveNotes(); // Atualizando LocalStorage após exclusão
     });
     note.appendChild(deleteBtn);
+
+    // Movimentando o post-it
+    note.addEventListener('mousedown', function(e) {
+        const offsetX = e.clientX - note.getBoundingClientRect().left;
+        const offsetY = e.clientY - note.getBoundingClientRect().top;
+
+        function mouseMoveHandler(e) {
+            note.style.top = `${e.clientY - offsetY}px`;
+            note.style.left = `${e.clientX - offsetX}px`;
+        }
+
+        function mouseUpHandler() {
+            document.removeEventListener('mousemove', mouseMoveHandler);
+            document.removeEventListener('mouseup', mouseUpHandler);
+            saveNotes(); // Atualizar LocalStorage após movimentação
+        }
+
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+    });
+
+    board.appendChild(note);
+    saveNotes(); // Atualizar LocalStorage após criação
 }    
 
 // Carregar as notas quando a página é carregada

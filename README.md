@@ -12,6 +12,7 @@ The Note Panel project is basically a panel of post-its for notes and tasks. I u
 
 ### Pending Tasks
 
+- [x] Save notes with localStorage
 - [ ] Add button or icon for print
 - [ ] Remove scroll and border from note
 - [ ] Responsive mobile
@@ -20,7 +21,7 @@ The Note Panel project is basically a panel of post-its for notes and tasks. I u
 
 > ## Online Project
 
-To see the project online just click on [HERE](https://notepanel.vercel.app/) or enter the link [notepanel.netlify.app](https://notepanel.vercel.app/).
+To see the project online just click on [HERE](https://notepanel.vercel.app/) or enter the link [notepanel.vercel.app](https://notepanel.vercel.app/).
 
 ---
 
